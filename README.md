@@ -15,9 +15,11 @@ Foi utilizado diversos componentes tanto de estilização quanto de mecânica no
 
 ### 🔥 Como contribuir
 
-Fork este respositório, 
-Faça as mudanças, 
+```
+Fork este respositório
+Faça as mudanças
 Abra um pull request
+```
 
 ### 💻 Tecnologias utilizadas
 
