@@ -1,0 +1,101 @@
+* {
+	margin: 0;
+	padding: 0;
+	outline: none;
+	font-family: 'Trebuchet MS', sans-serif;
+	font-weight: 500;
+	font-size: 	22px;
+}
+
+//main color variables --------------->
+
+$blue: rgb(30, 55, 153);
+$black: rgb(0, 0, 0);
+$gray: rgb(180, 180, 180);
+$red: rgb(235, 47, 6);
+$green: rgb(58, 227, 116);;
+$white: rgb(255, 255, 255);
+
+//the first configuration patterns---------->
+
+@mixin borderBottomLeftDefault{
+    border-bottom-left-radius: 25px;
+}
+@mixin borderBottomRightDefault{
+    border-bottom-right-radius: 25px;
+}
+
+@mixin borderMinDefault{
+    border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+}
+@mixin borderAvarageDefault{
+    border-top-right-radius: 25px;
+	border-top-left-radius: 25px;
+}
+@mixin flex{
+    display: flex;
+}
+@mixin sizeDefault{
+    width: 100px;
+    height: 50px;
+}
+@mixin flex-center{
+    justify-content: center;
+    align-items: center;
+}
+
+//---------------------------------------->
+
+body {
+    @include flex;
+    @include flex-center;
+	height: 100vh;
+	background: $blue;
+}
+
+input[type = text] {
+	width: 100%;
+	height: 50px;
+	@include borderMinDefault;
+}
+
+input[type = button] {
+	@include sizeDefault;
+	border-radius: 1px;
+	transition: ease 0.2s;
+}
+
+input[type = button]:hover {
+	filter: brightness(50%);
+}
+
+input[type = button]:active {
+	transform: scale(0.9);
+}
+
+#calculadora {
+	box-shadow: 0 0 17px $black;
+	@include borderAvarageDefault;
+}
+#calculadora div {
+	@include flex;
+}
+
+#calculadora input:nth-child(4) {
+	background: $gray;
+}
+
+#quarta input:nth-child(1) {
+	@include borderBottomLeftDefault;
+    background: $red;
+	color: $white;
+}
+
+#quarta input:nth-child(3) {
+	background: $green;
+}
+
+#quarta input:nth-child(4) {
+    @include borderBottomRightDefault;
+}
