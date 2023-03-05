@@ -6,6 +6,10 @@
 ### 📚 Sobre
 
 Pequeno projeto - Calculadora feita para fixação de conteúdo JavaScript.
+È necessário a instalação das dependências para alterações
+
+apenas dar o comando "npm i" já resolverá
+será instalar o sass
 
 ### 🎨 Detalhe
 
